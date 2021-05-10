@@ -1,0 +1,209 @@
+//== Footer Section ::::
+footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #202020;
+    z-index: 2;
+
+    //display: none;
+    .footer-container{
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+        @include respond-to-min(750){
+            padding-top: 70px;
+        }
+        .wrap{
+            padding-bottom: 0;
+        }
+        .text-box{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            @include respond-to-min(750){
+                width: 40%;
+                //padding-right: 30px;
+                padding-bottom: 0px;
+            }
+            .col50{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                @include respond-to-max(750){
+                    padding-left: 0;
+                    padding-right: 0;
+
+                }
+            }
+            p{
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 26px;
+                /* or 186% */
+                margin: 0;
+                margin-top: 25px;
+
+
+                /* Outline */
+
+                color: #E1E4E8;
+                
+            }
+        }
+        .menu-box{
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include respond-to-min(750){
+                flex-wrap: wrap;
+                width: 60%;
+            }
+
+            .nav-box{
+                padding-left: 0;
+                width: auto;
+                @include respond-to-min(750){
+                    padding-top: 40px;
+                }
+                h1{
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 26px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    /* identical to box height, or 186% */
+
+
+                    /* Outline */
+
+                    color: #E1E4E8;
+                }
+                ul{
+                    padding: 0;
+                    list-style: none;
+                    margin-top: 10px;
+                    li{
+                        font-family: 'Lato';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: #E1E4E8;
+                        a{
+                            color: #E1E4E8;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .nav-footer-box{
+                width: 100%;
+                @include respond-to-min(750){
+                    width: 50%;
+                }
+                .nav-footer{
+                    width: 100%;
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0;
+                        li{
+                            font-size: 16px;
+                            line-height: 32px;
+                            /* identical to box height, or 200% */
+                            
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+                            a{
+                                color: $primary-dark;
+                            }
+                        }
+                    }
+                }
+                .soci{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    a{
+                        padding: 5px 5px 5px 0;
+                        display: block;
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+    .nav-soci{
+        width: 100%;
+        border-bottom: 1px solid #828687;
+        padding-bottom: 15px;
+        ul{
+            width: 100%;
+            height: auto;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            @include respond-to-min(750){
+                justify-content: flex-end;
+            }
+            li{
+                margin: 0;
+                display: flex;
+                a{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .copy-box{
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            @include respond-to-min(750){
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        p{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            /* identical to box height, or 157% */
+            padding: 0;
+            margin: 0;
+            
+            
+            /* Outline */
+            
+            color: #E1E4E8;
+        }
+    }
+    
+}
+//========== /Footer Section

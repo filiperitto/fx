@@ -1,0 +1,364 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ | Ritto Edit */
+
+html {
+    color: #222;
+    background: #111;
+    font-size: 1em;
+    line-height: 1.4;
+    //scroll-behavior: smooth;
+}
+
+::-moz-selection {
+    background: #ffcd4f;
+    color: #111;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffcd4f;
+    color: #111;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font-size: 16px;
+    //font-family: $font-regular;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.wrap{
+    width: 100%;
+    //max-width: 1230px;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+.main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+//== Section Defaut ::::
+section {
+    width: 100%;
+    height: auto;
+    //float: left;
+    position: relative;
+    outline: none;
+
+    .title {
+        margin: 0 auto 30px;
+        display: flex;
+        justify-content: center;
+        font-family: $font-regular;
+        color: $primary-light;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 39px;
+        letter-spacing: 0em;
+        text-align: center;
+        
+        //text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+    }
+    
+    .subtitle{
+        max-width: 760px;
+        font-family: $font-regular;
+        color: $secondary-light;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: auto;
+
+    }
+}
+
+
+
+.accordion{
+    .item{
+        border-bottom: 1px solid #C2C2C2;
+        .acc-heading{
+            display: block;
+            padding: 11px 22px;
+            &.active{
+                color: #FFAF19;
+            }
+        }
+        .acc-content{
+            margin: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            .inner{
+                padding: 0 22px 22px;
+            }
+        }
+    }
+}
+//========== /Section Defaut
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.scrollhidden{
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+//	Headings
+
+a{
+    text-decoration: none;
+}
+    
+.gigantic,
+h1, h2, h3, h4, h5, h6{
+    color: #222;
+    font-weight: bold;
+    icon{
+        width: 20px;
+        height: 20px;
+        background: #303030;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #fff;
+        margin-right: 10px;
+    }
+}
+  
+
+.gigantic{
+    font-size: 110px;
+    line-height: 1.09;
+    letter-spacing: -2px;
+}
+
+h1{
+    font-size: 58px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+h2{
+    font-size: 35px;
+    line-height: 1.14;
+}
+
+h3{
+    font-size: 29px;
+    line-height: 1.38;
+}
+
+h4{
+    font-size: 21px;
+    line-height: 1.4;
+}
+h5{
+    font-size: 16px;
+}
+h6{
+    font-size: 11px;
+}
+
+small{
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+
+// Basic Text Style
+
+p{
+    opacity: 1;
+    margin: 0 0 20px 0;
+    line-height: 1.9;
+    font-weight: 500;
+    color: $secondary-light;
+}
+
+em{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold;
+}
+
+hr{
+    border: solid #ddd;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 10px 0 30px;
+    height: 0;
+}
+
+//form
+
+input,
+textarea,
+button{
+    box-sizing: border-box;
+}
+
+button{
+    background: transparent;
+    border: none;
+}

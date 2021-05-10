@@ -1,0 +1,64 @@
+.btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    /* identical to box height, or 13px */
+        cursor: pointer;
+    
+    
+    color: #FFFFFF;
+    background: transparent;
+    padding: 17px 28px;
+    //border-radius: 27px;
+    transition: all 0.1s ease-in-out;
+    display: table;
+    text-align: center;
+    border: 2px solid #fff;
+    &:hover{
+        color: #111;
+        background: #fff;
+        border: 2px solid #fff;
+        font-weight: 500;
+    }
+    &:active{
+        border: 2px solid #fff;
+    }
+    &:focus{
+        outline: none;
+    }
+    &.amarelo{
+        background: #FFB800;
+        color: #111;
+        border: 2px solid #FFB800;
+        &:hover{
+            color: #111;
+            background: #fff;
+            border: 2px solid #fff;
+        }
+        &:active{
+            border: 2px solid #fff;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    &.amarelo2{
+        background: #FFB800;
+        color: #fff;
+        border: 2px solid #FFB800;
+        font-weight: bold;
+        &:hover{
+            color: #fff;
+            font-weight: bold;
+            background: #e2a300;
+            border: 2px solid #e2a300;
+        }
+        &:active{
+            border: 2px solid #e2a300;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,397 @@
+.moduleTapume {
+    width: 100%;
+    height: auto;
+    background: #111;
+
+    @include respond-to-min(1200) {
+        height: 100vh;
+    }
+
+    .wrap {
+        display: flex;
+        height: 100%;
+        position: relative;
+        padding: 0;
+
+    }
+
+    .col50 {
+        width: 100%;
+
+        @include respond-to-min(1200) {
+            width: 50%;
+        }
+
+        &.left {
+            background: #111111b0;
+            position: relative;
+            z-index: 1;
+        }
+
+        &.right {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            z-index: 0;
+
+            @include respond-to-min(1200) {
+                position: relative;
+                width: 50%;
+                height: 100%;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 10%;
+        }
+
+        header {
+            padding-top: 40px;
+            padding-bottom: 30px;
+
+            @include respond-to-min(1200) {}
+        }
+
+        h1 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 40px;
+            letter-spacing: 1px;
+            /* or 44px */
+
+
+            color: #FFFFFF;
+
+            @include respond-to-min(725) {
+                font-size: 42px;
+                line-height: 51px;
+            }
+
+            @include respond-to-min(1200) {
+                font-size: 53px;
+                line-height: 64px;
+            }
+        }
+
+        h3 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 19px;
+            line-height: 30px;
+            /* or 21px */
+
+
+            color: #FFFFFF;
+
+            @include respond-to-min(725) {
+                margin-bottom: 35px;
+            }
+        }
+
+        .btn-box {
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                margin-right: 15px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .nav-soci {
+            width: 100%;
+            padding-bottom: 30px;
+
+            .wrap {
+                padding: 0;
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: flex-start;
+
+                @include respond-to-min(750) {
+                    justify-content: flex-start;
+                }
+
+                li {
+                    margin: 0;
+                    display: flex;
+
+                    a {
+                        padding: 10px;
+
+                        svg {
+                            opacity: 1;
+                            transition: all .1s ease-in-out;
+                        }
+
+                        &:hover {
+                            svg {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrap-img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                @include respond-to-min(580) {
+                    width: auto;
+                    height: 100%;
+                }
+
+                @include respond-to-min(1200) {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &.img1 {
+                    animation: slidein 3s;
+                    transition: all ease-in-out;
+                    animation-iteration-count: infinite;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.moduleInfo {
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    position: relative;
+    @include respond-to-min(1200) {
+        width: 50%;
+        height: 100%;
+        background: #F5F5F5;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: -100%;
+        transition: right .5s ease-out;
+    }
+    &.open{
+        
+        @include respond-to-min(1200) {
+            right: 0;
+        }
+    }
+    .close-button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #11111159;
+        cursor: pointer;
+        z-index: 3;
+        svg{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+
+    .wrap {
+        padding: 30px 10%;
+    }
+
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: normal;
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-size: 26px;
+            line-height: 60px;
+            letter-spacing: 1px;
+            /* or 20px */
+            
+            text-transform: uppercase;
+            
+            color: #000000;
+            
+        }
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            /* or 21px */
+
+
+            color: #9D9D9D;
+            @include respond-to-min(1200){
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+.newsletter{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    
+    &.in{
+        z-index: 1050;
+        .modal-box{
+            transform: translate(0,0);
+        }
+    }
+    .modal-box{
+        width: 500px;
+        margin: 30px auto;
+        background-color: #010202;
+        position: relative;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 6px;
+        outline: 0;
+        z-index: 2;
+
+        padding: 70px 40px;
+        transform: translate(0,-25%);
+        transition: all .3s ease-out;
+
+        .close-button-modal{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 3;
+            svg{
+                path{
+                }
+            }
+        }
+
+        h3{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 175.69%;
+            /* or 35px */
+
+            letter-spacing: -0.03em;
+
+            color: #FFFFFF;
+
+        }
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 25px;
+            /* or 21px */
+            
+            
+            color: #FFFFFF;
+        }
+        form{
+            margin: 0;
+            .input-container{
+                width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+                input{
+                    background: transparent;
+                    border: 1px solid #fff;
+                    &::placeholder{
+                        color: #fff;
+                    }
+                }
+            }
+            .submit-wrap{
+                padding: 15px 0;
+            }
+        }
+
+    }
+    .modal-bta{
+        width: 100%;
+        height: 100%;
+        z-index: 1049;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        z-index: 1;
+    }
+}
+
+.modal-backdrop{
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+    transition: all .15s linear;
+    opacity: 0;
+    &.in{
+        z-index: 1040;
+        opacity: .6;
+    }
+}

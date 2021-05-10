@@ -1,0 +1,78 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+// Fonts
+$font-regular: 'Roboto', sans-serif
+$avenir-medium: 'Roboto', sans-serif
+// Basic Colors
+$white: #ffffff
+//$blue: #002855
+$blue: #062953
+$lightblue: #00A0DF
+$darkblue: #08036B
+$green: #8DDF15
+$lightgreen: #E7FFFF
+$red: #FF443E
+$orange: #FF7512
+$yellow: #FFE251
+$gray: #CCCCCC
+
+// Socials
+
+$facebook: #3b5998
+$twitter: #00aced
+$linkedin: #007bb5
+
+//
+
+// Background
+$chat: #EFEFEF
+$bgr1: #ffffff
+$bgr2: linear-gradient(132.12deg, #4F556C -2.11%, #33384B 93.34%)
+$bgr-navbar: #F5F7F9
+$bgr-menu: #4F556C
+
+// Typography
+$primary-light: #34384A
+$secondary-light: #7E8190
+$disable-light: #D6D7DB
+
+$primary-dark: #ffffff
+$secondary-dark: #ACACAC
+$disable-dark: #7E8190
+
+// State Colors
+$success: #38E973
+$alert: #FF7175
+
+// Button Colors
+$btn-active: #EB00FF
+$icon-active: #5C5C5C
+$icon-selected: #FF7175
+$icon-disable: #D6D7DB
+
+//
+
+// Mixin's
+
+=linearGradientTopBottom($top, $bottom)
+  background: $top
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom))
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%)
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%)
+
+=linearGradientLeftRight($left, $right)
+  background: $left
+  background: -moz-linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+  background: -webkit-linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+  background: linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+
+=linearGradientLeftMiddleRight($left, $middle, $right)
+  background: $left
+  background: -moz-linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)
+  background: -webkit-linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)
+  background: linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)

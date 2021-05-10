@@ -1,0 +1,147 @@
+.grid {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    //margin-right: -.5rem;
+    //margin-left: -.5rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .title{
+        width: 100%;
+    }
+
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .relative{
+        position: relative;
+    }
+
+    .col100,
+    .col75,
+    .col70,
+    .col60,
+    .col50,
+    .col55,
+    .col45,
+    .col40,
+    .col30,
+    .col33,
+    .col25,
+    .col20{
+        height: auto;
+        padding: 0 15px 25px;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        @include respond-to-max(700){
+            padding: 0 10px 25px;
+        }
+    }
+
+    .col100 {
+        width: 100%;
+
+    }
+
+    .col80 {
+        width: 80%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+    }
+
+    .col75 {
+        width: 75%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+            
+
+    }
+
+    .col70 {
+        width: 70%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+            
+
+    }
+
+    .col60 {
+        width: 60%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+    
+    .col55{
+        width: 55%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+    
+    .col50{
+        width: 50%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+    
+    .col45 {
+        width: 45%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+    .col40 {
+        width: 40%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+
+    .col33 {
+        width: 33%;
+        @include respond-to-max(800){
+            width: 50%;
+        }
+
+    }
+
+    .col30 {
+        width: 30%;
+        @include respond-to-max(800){
+            width: 50%;
+        }
+
+    }
+
+    .col25 {
+        width: 25%;
+        @include respond-to-max(800){
+            width: 50%;
+        }
+
+    }
+
+    .col20 {
+        width: 20%;
+        @include respond-to-max(800){
+            width: 100%;
+        }
+
+    }
+}
